@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "subtitle-ui"
+version = "0.1.0"
+description = ""
+authors = ["cro7nis <cro7nis@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+loguru = "^0.7.2"
+dynaconf = "^3.2.4"
+cryptography = "41.0.7"
+streamlit = "*"
+
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-cov = "^4.1.0"
+pyinstaller = "5.13.2"
+tinyaes = "1.0.3"
+pecan = "1.4.1"
+httpx = "^0.24.1"
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = 'warning'
+minversion = "6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

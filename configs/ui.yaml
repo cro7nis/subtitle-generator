@@ -1,0 +1,4 @@
+default:
+  api:
+    host: localhost
+    port: 8050

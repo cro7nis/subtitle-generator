@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "subtitle-service"
+version = "0.1.0"
+description = ""
+authors = ["cro7 <cro7nis@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+torch = "2.1.0"
+torchaudio = "*"
+loguru = "^0.7.2"
+cython = "^3.0.6"
+youtokentome = { git = "https://github.com/LahiLuk/YouTokenToMe" }
+faster-whisper = "1.0.1"
+transformers = "~4.36"
+optimum = "^1.15.0"
+accelerate = "^0.25.0"
+fastapi = "^0.108.0"
+dynaconf = "^3.2.4"
+uvicorn = "^0.25.0"
+gunicorn = "21.2.0"
+sentencepiece = "^0.1.99"
+cryptography = "41.0.7"
+omegaconf = "*"
+pytube = "*"
+librosa= "*"
+
+
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-cov = "^4.1.0"
+pyinstaller = "5.13.2"
+tinyaes = "1.0.3"
+pecan = "1.4.1"
+httpx = "^0.24.1"
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = 'warning'
+minversion = "6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
