@@ -38,8 +38,6 @@ profiles:
           attributes:
             vendor:
               nvidia:
-                - model: rtx4000
-                  ram: 3Gi
     ui:
       resources:
         cpu:
