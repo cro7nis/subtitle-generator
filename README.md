@@ -1,10 +1,17 @@
-# Subtitle generator API and UI
+# Subtitle Generator
 
-Subtitle generator with [faster whisper](https://github.com/SYSTRAN/faster-whisper), which is a
-reimplementation of  [OpenAI's Whisper](https://github.com/openai/whispermodel) using CTranslate2 for faster inference.
+Automatic subtitle generator using [faster whisper](https://github.com/SYSTRAN/faster-whisper) repo. Faster whisper is a remplementation of  [OpenAI's Whisper](https://github.com/openai/whispermodel) using CTranslate2 for faster inference.
 
-The Subtible generator consists of an API that is built with [FastAPI](https://fastapi.tiangolo.com/) and a
-with [Streamlit](https://streamlit.io/) UI.
+The Subtible generator consists of an API that is built with [FastAPI](https://fastapi.tiangolo.com/) and a UI powered by [Streamlit](https://streamlit.io/).
+
+## Host on Akash <img src="./assets/akash-logo.png" alt="drawing" width=20 height=20/> 
+
+- Follow the [Akash docs](https://akash.network/docs/deployments/cloudmos-deploy/) to get started with deployments
+- When ready, use the [deploy.yaml](deploy.yaml) to the Akash SDL prompt and deploy
+  - In order to generate subtibles faster, api service needs to run on GPU with more than 3GB VRAM available
+  - The [deploy.yaml](deploy.yaml) is tested on sandbox network and currenly has minimal resource requirements. Consider increasing them to improve speed.
+
+<img src="./assets/ui.png" alt="drawing" width=600/>
 
 ## Docker
 
@@ -29,6 +36,8 @@ with [Streamlit](https://streamlit.io/) UI.
   
   - `<device-id>` the gpu id
   - `<port>` the API port (default: 8050)
+  - to change the model size add `-e DYNACONF_TRANSCRIBER__MODEL <model-size>` (default: medium)
+    - `<model-size>` values: base, small, medium, large
 
 
 - Run the UI
