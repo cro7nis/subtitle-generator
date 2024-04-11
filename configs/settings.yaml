@@ -34,8 +34,8 @@ default:
       - uvicorn.access
       - uvicorn.error
   transcriber:
-    model: small
-    device: cpu
+    model: medium
+    device: cuda:0
     ckpt_path: checkpoints/whisper
     compute_type: float16
     cpu_threads: 8
