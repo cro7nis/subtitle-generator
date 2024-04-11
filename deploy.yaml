@@ -10,6 +10,7 @@ services:
           - service: ui
           - global: true
     env:
+      - DYNACONF_TRANSCRIBER__MODEL=medium
       - DYNACONF_API__SERVER__BIND=8050
   ui:
     image: cro7/subtitle_generator_ui:0.0.1
