@@ -11,7 +11,7 @@ The Subtible generator consists of an API that is built with [FastAPI](https://f
   - In order to generate subtibles faster, api service needs to run on GPU with more than 3GB VRAM available
   - The [deploy.yaml](deploy.yaml) is tested on sandbox network and currenly has minimal resource requirements. Consider increasing them to improve speed.
 
-<img src="./assets/ui.png" alt="drawing" width=600/>
+<img src="./assets/ui.png" alt="drawing">
 
 ## Docker
 
