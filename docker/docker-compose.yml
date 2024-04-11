@@ -6,14 +6,15 @@ services:
     container_name: subtitle_generator_service_worker
     image: cro7/subtitle_generator_service:0.0.1 
     environment:
-      DYNACONF_API__SERVER__BIND: 8050 #${MILVUS_HOST:-milvus_standalone}
+      DYNACONF_TRANSCRIBER__MODEL: medium
+      DYNACONF_API__SERVER__BIND: 8050
     ports:
       - "8050:8050"
   ui:
     container_name: subtitle_generator_ui_worker
     image: cro7/subtitle_generator_ui:0.0.1
     environment:
-      DYNACONF_API__HOST: api #${MILVUS_HOST:-milvus_standalone}
+      DYNACONF_API__HOST: api
       DYNACONF_API__PORT: 8050
       PORT: 8051
     ports:
