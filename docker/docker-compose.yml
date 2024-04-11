@@ -4,7 +4,7 @@ services:
 
   api:
     container_name: subtitle_generator_service_worker
-    image: cro7/subtitle_generator_service:0.0.1 
+    image: cro7/subtitle_generator_service:0.0.2
     environment:
       DYNACONF_TRANSCRIBER__MODEL: medium
       DYNACONF_API__SERVER__BIND: 8050
@@ -12,7 +12,7 @@ services:
       - "8050:8050"
   ui:
     container_name: subtitle_generator_ui_worker
-    image: cro7/subtitle_generator_ui:0.0.1
+    image: cro7/subtitle_generator_ui:0.0.2
     environment:
       DYNACONF_API__HOST: api
       DYNACONF_API__PORT: 8050

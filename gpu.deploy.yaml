@@ -2,7 +2,7 @@
 version: "2.0"
 services:
   api:
-    image: cro7/subtitle_generator_service:0.0.1
+    image: cro7/subtitle_generator_service:0.0.2
     expose:
       - port: 8050
         as: 8050
@@ -13,7 +13,7 @@ services:
       - DYNACONF_TRANSCRIBER__MODEL=medium
       - DYNACONF_API__SERVER__BIND=8050
   ui:
-    image: cro7/subtitle_generator_ui:0.0.1
+    image: cro7/subtitle_generator_ui:0.0.2
     expose:
       - port: 8051
         as: 80
