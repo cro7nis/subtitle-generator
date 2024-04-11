@@ -34,14 +34,11 @@ def generate_subs(path, task, fmt):
 st.set_page_config(page_title="Subtitle generator", page_icon=":movie_camera:", layout="wide")
 st.write("# Subtitle generator with faster whisper")
 
-img = Image.open('assets/akash-logo.png')
-col1, col2, _, = st.columns([0.15, 0.01, 0.84])
-with col1:
-    st.markdown(
-        "###### Made with :heart: by [@cro7nis](https://twitter.com/cro7nis) and hosted on ![](assets/akash-logo.png)",
-        unsafe_allow_html=True)
-with col2:
-    st.image(img, width=20)
+img = Image.open('assets/akash.png')
+st.image(img, width=200)
+st.markdown(
+    "###### Made with :heart: by [@cro7nis](https://twitter.com/cro7nis)",
+    unsafe_allow_html=True)
 
 st.write(
     "The code is open source and available "
