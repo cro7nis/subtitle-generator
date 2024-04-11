@@ -1,4 +1,6 @@
-FROM pytorch/pytorch:2.1.0-cuda12.1-cudnn8-runtime as build
+#FROM pytorch/pytorch:2.1.0-cuda12.1-cudnn8-runtime as build
+FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-runtime as build
+
 
 LABEL maintainer="cro7 <cro7nis@gmail.com>"
 
@@ -35,5 +37,6 @@ COPY --chown=$USER:$USER src/service service
 COPY --chown=$USER:$USER configs configs
 COPY --chown=$USER:$USER src/app.py app.py
 
+ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/conda/lib/python3.10/site-packages/torch/lib
 
 ENTRYPOINT python app.py

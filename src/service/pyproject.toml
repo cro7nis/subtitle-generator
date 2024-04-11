@@ -6,15 +6,15 @@ authors = ["cro7 <cro7nis@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
-torch = "2.1.0"
+torch = "2.0.1"
 torchaudio = "*"
 loguru = "^0.7.2"
 cython = "^3.0.6"
 youtokentome = { git = "https://github.com/LahiLuk/YouTokenToMe" }
-faster-whisper = "1.0.1"
-transformers = "~4.36"
-optimum = "^1.15.0"
-accelerate = "^0.25.0"
+faster-whisper = "0.10.1"
+transformers = "*"
+optimum = "*"
+accelerate = "*"
 fastapi = "^0.108.0"
 dynaconf = "^3.2.4"
 uvicorn = "^0.25.0"
